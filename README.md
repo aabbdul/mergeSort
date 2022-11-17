@@ -1,1 +1,1 @@
-sorting a list without the sort() method
+merge sort
