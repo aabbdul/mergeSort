@@ -1,10 +1,12 @@
+from random import randint
+
 def mergeSort(mylist):
 	if len(mylist) > 1:
 		mid = len(mylist) // 2
 		left = mylist[:mid]
 		right = mylist[mid:]
 
-		# Recursive
+		# Rekursif
 		mergeSort(left)
 		mergeSort(right)
 
@@ -28,7 +30,12 @@ def mergeSort(mylist):
 			mylist[k] = right[j]
 			j += 1
 			k += 1
-list_saya = [54, 26, 93, 17, 77]
+
+def create_array(length=10, maxint=50):
+    new_arr = [randint(0,maxint) for _ in range(length)]
+    return new_arr
+
+list_saya = create_array()
 print(f"Before (List) = {list_saya}")
 mergeSort(list_saya)
 print(f"\nAfter (Sort)  = {list_saya}")
